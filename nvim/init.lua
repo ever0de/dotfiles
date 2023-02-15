@@ -1,10 +1,11 @@
 -- Setup
-require("plugins.setup")
+require('plugins.setup')
 
 -- Settings
-require("settings")
+require('settings')
 
 -- Plugins
 
--- <https://github.com/lewis6991/impatient.nvim>
-require("impatient")
+require('impatient')
+require('nvim-tree').setup()
+require('plugins.theme')

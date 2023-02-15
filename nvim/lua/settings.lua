@@ -24,7 +24,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- Completion
-vim.opt.completeopt = "menu,menuone,noselect"
+vim.opt.completeopt = 'menu,menuone,noselect'
 
 -- NvimTree
 vim.g.loaded_netrw = 1
@@ -32,19 +32,15 @@ vim.g.loaded_netrwPlugin = 1
 
 -- Color
 vim.opt.termguicolors = true
-require("onedark").setup {
-	style = "warmer"
-}
-require("onedark").load()
 
 vim.opt.cursorline = true
 vim.opt.hidden = true
 vim.opt.scrolloff = 8
 vim.opt.updatetime = 300
-vim.wo.signcolumn = "yes:2"
+vim.wo.signcolumn = 'yes:2'
 
-vim.opt.fileformat = "unix"
-vim.opt.encoding = "utf-8"
+vim.opt.fileformat = 'unix'
+vim.opt.encoding = 'utf-8'
 vim.cmd([[
 	language en_US
 ]])
