@@ -16,6 +16,11 @@ require('lualine').setup {
 	},
 }
 require("bufferline").setup()
+require('trouble').setup {
+	height = 15,
+	mode = 'document_diagnostics',
+}
+
 
 -- Terminal
 require('toggleterm').setup {
