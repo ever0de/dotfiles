@@ -48,6 +48,9 @@ return require('packer').startup(function(use)
 		tag = "v3.*",
 		requires = 'nvim-tree/nvim-web-devicons'
 	}
+	use { -- easily manage multiple terminal windows
+		'akinsho/toggleterm.nvim'
+	}
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
