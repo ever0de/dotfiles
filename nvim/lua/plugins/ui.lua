@@ -20,7 +20,7 @@ require('trouble').setup {
 	height = 15,
 	mode = 'document_diagnostics',
 }
-
+require('lsp-colors').setup()
 
 -- Terminal
 require('toggleterm').setup {

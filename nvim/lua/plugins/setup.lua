@@ -55,6 +55,9 @@ return require('packer').startup(function(use)
 		"folke/trouble.nvim",
 		requires = "nvim-tree/nvim-web-devicons",
 	}
+	use { -- lugin that creates missing LSP diagnostics highlight groups for color schemes
+		'folke/lsp-colors.nvim'
+	}
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
