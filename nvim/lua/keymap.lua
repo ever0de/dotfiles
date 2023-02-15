@@ -1,2 +1,2 @@
 -- NvimTree
-vim.keymap.set('n', '<Leader>e', '<cmd>NvimTreeFindFileToggle<CR>')
+vim.keymap.set('n', '<Space>e', '<cmd>NvimTreeFindFileToggle<CR>')

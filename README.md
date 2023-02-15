@@ -2,4 +2,4 @@
 
 ## NeoVim [Keymap](./nvim/lua/keymap.lua)
 
-- `\ + e`: Open file explorer
+- `<Space> + e`: Open file explorer
