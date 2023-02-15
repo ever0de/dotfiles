@@ -36,7 +36,8 @@ return require('packer').startup(function(use)
 			'nvim-tree/nvim-web-devicons',
 		},
 	}
-	use {
+	use 'navarasu/onedark.nvim' -- Theme inspired by Atom
+	use { -- Fancier statusline
 		'nvim-lualine/lualine.nvim',
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
