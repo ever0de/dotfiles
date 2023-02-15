@@ -12,6 +12,12 @@ window:
 
 # Font configuration (changes require restart)
 font:
+  # The normal (roman) font face to use.
+  # Style can be specified to pick a specific face.
+  normal:
+    family: "FiraCode Nerd Font"
+    style: Light
+
   # Point size of the font
   size: 15.0
 
