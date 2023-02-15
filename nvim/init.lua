@@ -6,6 +6,8 @@ require('settings')
 
 -- Plugins
 
+require('plugins.theme')
+
 require('impatient')
 require('nvim-tree').setup()
-require('plugins.theme')
+require('lualine').setup()
