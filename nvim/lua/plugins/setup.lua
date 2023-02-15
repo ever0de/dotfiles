@@ -30,13 +30,15 @@ return require('packer').startup(function(use)
 	use 'lewis6991/impatient.nvim'
 
 	-- UI
-	use {
+	use { -- File explorer tree
 		'nvim-tree/nvim-tree.lua',
 		requires = {
 			'nvim-tree/nvim-web-devicons',
 		},
 	}
-	use 'navarasu/onedark.nvim' -- Theme inspired by Atom
+	use { -- Theme inspired by Atom
+		'navarasu/onedark.nvim'
+	}
 	use { -- Fancier statusline
 		'nvim-lualine/lualine.nvim',
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
