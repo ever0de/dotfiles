@@ -4,6 +4,7 @@ require('onedark').load()
 
 -- File Explorer Tree
 require('nvim-tree').setup {
+	open_on_setup = true,
 	disable_netrw = true,
 	hijack_unnamed_buffer_when_opening = true,
 	sync_root_with_cwd = true,
