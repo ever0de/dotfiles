@@ -55,7 +55,7 @@ require('lsp-colors').setup()
 -- Terminal
 require('toggleterm').setup {
 	open_mapping = '<Leader>`',
-	direction = 'float',
+	direction = 'horizontal',
 	float_opts = {
 		border = 'curved',
 	},
