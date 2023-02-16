@@ -7,6 +7,8 @@ require('keymap')
 -- Plugins
 require('impatient')
 
-require('plugins.ui')
 require('plugins.telescope')
 require('plugins.treesitter')
+require('plugins.nvim-tree')
+require('plugins.ui')
+require('plugins.bufferline')

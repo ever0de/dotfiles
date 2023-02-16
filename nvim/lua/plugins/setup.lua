@@ -24,7 +24,7 @@ if not status then
 	return
 end
 
-return require('packer').startup(function(use)
+return packer.startup(function(use)
 	use 'wbthomason/packer.nvim'
 
 	use 'lewis6991/impatient.nvim'
@@ -74,6 +74,9 @@ return require('packer').startup(function(use)
 	-- Git
 	use {
 		'lewis6991/gitsigns.nvim'
+	}
+	use {
+		'lewis6991/foldsigns.nvim'
 	}
 
 

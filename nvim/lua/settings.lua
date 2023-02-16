@@ -1,7 +1,3 @@
--- NvimTree
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
 vim.wo.signcolumn = 'yes:2'
 vim.cmd([[
 	language en_US
