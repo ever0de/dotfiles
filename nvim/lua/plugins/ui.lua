@@ -60,3 +60,6 @@ require('toggleterm').setup {
 		border = 'curved',
 	},
 }
+
+-- Git
+require('gitsigns').setup()
