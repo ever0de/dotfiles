@@ -4,7 +4,6 @@ require('onedark').load()
 
 -- File Explorer Tree
 require('nvim-tree').setup {
-	open_on_setup = true,
 	disable_netrw = true,
 	hijack_unnamed_buffer_when_opening = true,
 	sync_root_with_cwd = true,
@@ -34,6 +33,20 @@ require('nvim-tree').setup {
 		},
 	},
 }
+local function open_nvim_tree(data)
+	-- buffer is a directory
+	local directory = vim.fn.isdirectory(data.file) == 1
+
+	-- change to the directory
+	if directory then
+		vim.cmd.cd(data.file)
+	end
+
+	-- open the tree
+	require("nvim-tree.api").tree.open()
+end
+vim.api.nvim_create_autocmd({ 'VimEnter' }, { callback = open_nvim_tree })
+
 -- Status line
 require('lualine').setup {
 	options = {
