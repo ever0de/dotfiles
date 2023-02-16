@@ -8,3 +8,4 @@ require('keymap')
 require('impatient')
 
 require('plugins.ui')
+require('plugins.telescope')

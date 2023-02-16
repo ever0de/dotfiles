@@ -29,6 +29,11 @@ return require('packer').startup(function(use)
 
 	use 'lewis6991/impatient.nvim'
 
+	use {
+		'nvim-telescope/telescope.nvim', branch = '0.1.x',
+		requires = { { 'nvim-lua/plenary.nvim' } }
+	}
+
 	-- UI
 	use { -- File explorer tree
 		'nvim-tree/nvim-tree.lua',
