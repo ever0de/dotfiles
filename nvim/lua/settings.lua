@@ -1,46 +1,50 @@
--- Line number
-vim.opt.number = true
-vim.opt.relativenumber = true
-
--- Indent
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-vim.opt.smartindent = true
-vim.opt.breakindent = true
-vim.opt.wrap = true
-
--- Undo history
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undofile = true
-
--- Search
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
-vim.opt.wildignorecase = true
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-
--- Completion
-vim.opt.completeopt = 'menu,menuone,noselect'
-
 -- NvimTree
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- Color
-vim.opt.termguicolors = true
-
-vim.opt.cursorline = true
-vim.opt.hidden = true
-vim.opt.scrolloff = 8
-vim.opt.updatetime = 300
 vim.wo.signcolumn = 'yes:2'
-
-vim.opt.fileformat = 'unix'
-vim.opt.encoding = 'utf-8'
 vim.cmd([[
 	language en_US
 ]])
+
+local default_options = {
+	-- clipboard = "unnamedplus", -- allows neovim to access the system clipboard
+
+	-- Line number
+	number = true,
+	relativenumber = true,
+	-- Ident
+	tabstop = 4,
+	softtabstop = 4,
+	shiftwidth = 4,
+	expandtab = true,
+	smartindent = true,
+	breakindent = true,
+	wrap = true,
+	-- Undo history
+	swapfile = false,
+	backup = false,
+	undofile = true,
+	-- Search
+	hlsearch = false,
+	incsearch = true,
+	wildignorecase = true,
+	ignorecase = true,
+	smartcase = true,
+	-- Completion
+	completeopt = 'menu,menuone,noselect',
+	-- Color
+	termguicolors = true,
+	--
+	cursorline = true,
+	hidden = true,
+	scrolloff = 8,
+	updatetime = 300,
+	--
+	fileformat = 'unix',
+	encoding = 'utf-8',
+}
+
+for k, v in pairs(default_options) do
+	vim.opt[k] = v
+end
