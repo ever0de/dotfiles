@@ -24,7 +24,7 @@ require('lsp-colors').setup()
 
 -- Terminal
 require('toggleterm').setup {
-	open_mapping = [[<Space>`]],
+	open_mapping = '<Leader>`',
 	direction = 'float',
 	float_opts = {
 		border = 'curved',
