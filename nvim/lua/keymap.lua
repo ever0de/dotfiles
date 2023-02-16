@@ -18,3 +18,9 @@ vim.keymap.set('n', '<Leader>0', function() bufferline.go_to_buffer(10, true) en
 vim.keymap.set('n', '<Leader>q', '<cmd>bp|bd #<CR>')
 vim.keymap.set('n', ']b', function() bufferline.cycle(1) end, { desc = 'Next [B]uffer' })
 vim.keymap.set('n', '[b', function() bufferline.cycle( -1) end, { desc = 'Previous [B]uffer' })
+
+-- Telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<Leader>p', builtin.find_files)
+vim.keymap.set('n', '<Leader><S-f>', builtin.live_grep)
+vim.keymap.set('n', '<Leader>/', builtin.current_buffer_fuzzy_find, { desc = '[/] Fuzzily search in current buffer' })
