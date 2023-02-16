@@ -30,6 +30,13 @@ return require('packer').startup(function(use)
 	use 'lewis6991/impatient.nvim'
 
 	use {
+		'nvim-treesitter/nvim-treesitter',
+		run = function()
+			pcall(require('nvim-treesitter.install').update, { with_sync = true })
+		end,
+	}
+
+	use {
 		'nvim-telescope/telescope.nvim', branch = '0.1.x',
 		requires = { { 'nvim-lua/plenary.nvim' } }
 	}
