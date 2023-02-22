@@ -9,7 +9,6 @@ require('lualine').setup {
 		component_separators = '|',
 		disabled_filetypes = {
 			statusline = { 'NvimTree', 'toggleterm' },
-			-- winbar = { 'NvimTree', 'toggleterm' }
 		},
 	},
 }
@@ -18,7 +17,6 @@ require('trouble').setup {
 	height = 15,
 	mode = 'document_diagnostics',
 }
-
 
 -- Terminal
 require('toggleterm').setup {

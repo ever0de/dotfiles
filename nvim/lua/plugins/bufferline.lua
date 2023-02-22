@@ -25,6 +25,6 @@ vim.keymap.set('n', '<Leader>7', function() bufferline.go_to_buffer(7, true) end
 vim.keymap.set('n', '<Leader>8', function() bufferline.go_to_buffer(8, true) end)
 vim.keymap.set('n', '<Leader>9', function() bufferline.go_to_buffer(9, true) end)
 vim.keymap.set('n', '<Leader>0', function() bufferline.go_to_buffer(10, true) end)
-vim.keymap.set('n', '<Leader>q', '<cmd>bp|bd #<CR>')
+vim.keymap.set('n', '<Leader>w', '<cmd>bp|bd #<CR>')
 vim.keymap.set('n', ']b', function() bufferline.cycle(1) end, { desc = 'Next [B]uffer' })
 vim.keymap.set('n', '[b', function() bufferline.cycle( -1) end, { desc = 'Previous [B]uffer' })
