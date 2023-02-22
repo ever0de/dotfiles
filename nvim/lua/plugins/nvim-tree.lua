@@ -30,6 +30,9 @@ require('nvim-tree').setup {
 			close = true,
 		},
 	},
+    filters = {
+        custom = { '.git', 'target', 'build', 'dist', 'node_modules' }
+    }
 }
 local function open_nvim_tree(data)
 	-- buffer is a directory
