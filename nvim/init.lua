@@ -98,6 +98,17 @@ require('lazy').setup({
 		branch = '0.1.x',
 		dependencies = { 'nvim-lua/plenary.nvim' },
 		config = true,
+        lazy = true,
+        keys = {
+            { '<Leader>p', require('telescope.builtin').find_files },
+            { '<Leader><S-f>', require('telescope.builtin').live_grep },
+            { '<Leader>fh', require('telescope.builtin').help_tags },
+            { 
+                '<Leader>/', 
+                require('telescope.builtin').current_buffer_fuzzy_find,
+			    desc = '[/] Fuzzily search in current buffer'
+			},
+        },
 		opts = {
 			defaults = {
 				winblend = 20,
@@ -116,16 +127,6 @@ require('lazy').setup({
 				},
 			},
 		},
-		init = function()
-			local builtin = require('telescope.builtin')
-
-			vim.keymap.set('n', '<Leader>p', builtin.find_files)
-			vim.keymap.set('n', '<Leader><S-f>', builtin.live_grep)
-			vim.keymap.set('n', '<leader>fh', builtin.help_tags)
-			vim.keymap.set('n', '<Leader>/', builtin.current_buffer_fuzzy_find,
-				{ desc = '[/] Fuzzily search in current buffer' }
-			)
-		end
 	},
 	{ -- File explorer tree
 		'nvim-tree/nvim-tree.lua',
