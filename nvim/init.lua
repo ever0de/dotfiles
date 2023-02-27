@@ -218,6 +218,30 @@ require('lazy').setup({
 			vim.keymap.set('n', '[b', function() bufferline.cycle( -1) end, { desc = 'Previous [B]uffer' })
 		end,
 	},
+    {
+        'rcarriga/nvim-notify',
+        config = true,
+        opts = {
+            background_colour = "Normal",
+            fps = 15,
+            icons = {
+                DEBUG = "",
+                ERROR = "",
+                INFO = "",
+                TRACE = "✎",
+                WARN = ""
+            },
+            level = 2,
+            minimum_width = 50,
+            render = "default",
+            stages = "slide",
+            timeout = 5000,
+            top_down = false
+        },
+        init = function()
+			vim.opt.termguicolors = true
+        end,
+    },
 	{ -- Git integration for buffers
 		'lewis6991/gitsigns.nvim',
 		config = true,
