@@ -127,6 +127,9 @@ require('lazy').setup({
 				},
 			},
 		},
+        init = function()
+            require('telescope').load_extension('notify')
+        end,
 	},
 	{ -- File explorer tree
 		'nvim-tree/nvim-tree.lua',
@@ -200,8 +203,6 @@ require('lazy').setup({
 			},
 		},
 		init = function()
-			vim.opt.termguicolors = true
-
 			local bufferline = require('bufferline')
 			vim.keymap.set('n', '<Leader>1', function() bufferline.go_to_buffer(1, true) end)
 			vim.keymap.set('n', '<Leader>2', function() bufferline.go_to_buffer(2, true) end)
@@ -238,9 +239,6 @@ require('lazy').setup({
             timeout = 5000,
             top_down = false
         },
-        init = function()
-			vim.opt.termguicolors = true
-        end,
     },
 	{ -- Git integration for buffers
 		'lewis6991/gitsigns.nvim',
