@@ -98,17 +98,17 @@ require('lazy').setup({
 		branch = '0.1.x',
 		dependencies = { 'nvim-lua/plenary.nvim' },
 		config = true,
-        lazy = true,
-        keys = {
-            { '<Leader>p', require('telescope.builtin').find_files },
-            { '<Leader><S-f>', require('telescope.builtin').live_grep },
-            { '<Leader>fh', require('telescope.builtin').help_tags },
-            { 
-                '<Leader>/', 
-                require('telescope.builtin').current_buffer_fuzzy_find,
-			    desc = '[/] Fuzzily search in current buffer'
+		lazy = true,
+		keys = {
+			{ '<Leader>p',     require('telescope.builtin').find_files },
+			{ '<Leader><S-f>', require('telescope.builtin').live_grep },
+			{ '<Leader>fh',    require('telescope.builtin').help_tags },
+			{
+				'<Leader>/',
+				require('telescope.builtin').current_buffer_fuzzy_find,
+				desc = '[/] Fuzzily search in current buffer'
 			},
-        },
+		},
 		opts = {
 			defaults = {
 				winblend = 20,
@@ -127,9 +127,9 @@ require('lazy').setup({
 				},
 			},
 		},
-        init = function()
-            require('telescope').load_extension('notify')
-        end,
+		init = function()
+			require('telescope').load_extension('notify')
+		end,
 	},
 	{ -- File explorer tree
 		'nvim-tree/nvim-tree.lua',
@@ -219,27 +219,27 @@ require('lazy').setup({
 			vim.keymap.set('n', '[b', function() bufferline.cycle( -1) end, { desc = 'Previous [B]uffer' })
 		end,
 	},
-    {
-        'rcarriga/nvim-notify',
-        config = true,
-        opts = {
-            background_colour = "Normal",
-            fps = 15,
-            icons = {
-                DEBUG = "",
-                ERROR = "",
-                INFO = "",
-                TRACE = "✎",
-                WARN = ""
-            },
-            level = 2,
-            minimum_width = 50,
-            render = "default",
-            stages = "slide",
-            timeout = 5000,
-            top_down = false
-        },
-    },
+	{
+		'rcarriga/nvim-notify',
+		config = true,
+		opts = {
+			background_colour = "Normal",
+			fps = 15,
+			icons = {
+				DEBUG = "",
+				ERROR = "",
+				INFO = "",
+				TRACE = "✎",
+				WARN = ""
+			},
+			level = 2,
+			minimum_width = 50,
+			render = "default",
+			stages = "slide",
+			timeout = 5000,
+			top_down = false
+		},
+	},
 	{ -- Git integration for buffers
 		'lewis6991/gitsigns.nvim',
 		config = true,
