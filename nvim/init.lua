@@ -62,6 +62,11 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Plugins
 require('lazy').setup({
+    {
+        'numToStr/Comment.nvim',
+        config = true,
+    },
+
 	{ -- Improve startup time	
 		'lewis6991/impatient.nvim',
 		config = function()
