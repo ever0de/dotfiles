@@ -260,7 +260,6 @@ require('lazy').setup({
 				section_separators = '',
 				component_separators = '|',
 				disabled_filetypes = {
-					-- TODO: Add toggleterm
 					statusline = { 'Lazy', 'NvimTree', 'toggleterm' }
 				},
 			},
