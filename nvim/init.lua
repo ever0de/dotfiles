@@ -46,7 +46,6 @@ for k, v in pairs(default_options) do
 	vim.opt[k] = v
 end
 
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
@@ -62,10 +61,10 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Plugins
 require('lazy').setup({
-    {
-        'numToStr/Comment.nvim',
-        config = true,
-    },
+	{
+		'numToStr/Comment.nvim',
+		config = true,
+	},
 
 	{ -- Improve startup time	
 		'lewis6991/impatient.nvim',
@@ -90,13 +89,15 @@ require('lazy').setup({
 					'javascript',
 					'typescript',
 					'lua',
+
 					'vim',
-					'help'
+					'help',
 				},
 				highlight = { enable = true },
 				indent = { enable = true },
 			}
-		end
+		end,
+		build = ':TSUpdate',
 	},
 	{ -- Find, Filter, Preview, Pick. All lua, all the time
 		'nvim-telescope/telescope.nvim',
