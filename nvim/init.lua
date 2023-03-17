@@ -184,6 +184,11 @@ require('lazy').setup({
 					if directory then
 						vim.cmd.cd(data.file)
 					end
+
+                    if vim.bo.filetype == "gitrebase" then
+                        return 
+                    end 
+
 					require('nvim-tree.api').tree.open()
 				end
 			})
