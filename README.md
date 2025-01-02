@@ -1,4 +1,10 @@
-# `~/.config` configuration files
+# dotfiles with [dotbot](https://github.com/anishathalye/dotbot)
+
+`~/.config` configuration files.
+
+## dotbot
+
+Run `install`
 
 ## Neovim
 
