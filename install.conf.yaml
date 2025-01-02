@@ -1,0 +1,37 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ["~", "~/.config"]
+
+- link:
+    # zsh
+    ~/.zshrc: terminal/zsh/zshrc
+    # ~/.p10k.zsh: zsh/p10k.zsh
+    ~/.oh-my-zsh: terminal/zsh/omz
+    ~/.oh-my-zsh-custom: terminal/zsh/omz-custom
+
+    # terminal
+    ~./config/alaclitty: terminal/alacritty
+    ~/.config/kitty: terminal/kitty
+
+    # tools
+    ~/.gitconfig: tools/git/.gitconfig
+    ~/.vimrc: tools/vim/.vimrc
+
+    # ~/.config/bat: tools/bat
+    ~/.config/yazi: tools/yazi
+    ~/.config/nvim: tools/nvim
+
+    ~/.hammerspoon: tools/hammerspoon
+
+    ~/.cargo/config.toml: tools/cargo/cargo_config.toml
+
+- create:
+    ~/.ssh:
+      mode: 0700
+    ~/workspace:
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [nvim --headless "+Lazy! sync" +qa]
