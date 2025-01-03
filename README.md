@@ -14,7 +14,7 @@ Run `install`
 :Lazy sync
 ```
 
-### [Keymap](./nvim/lua/keymap.lua)
+### [Keymap](./tools/nvim/lua/keymap.lua)
 
 - `<Space> + e` : Open file explorer
 - `<Space> + <backtick>`: Open toggle terminal
