@@ -2,3 +2,12 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
+[submodule "terminal/zsh/omz"]
+	path = terminal/zsh/omz
+	url = https://github.com/ohmyzsh/ohmyzsh
+[submodule "terminal/zsh/omz-custom/plugins/zsh-autosuggestions"]
+	path = terminal/zsh/omz-custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "terminal/zsh/omz-custom/plugins/zsh-syntax-highlighting"]
+	path = terminal/zsh/omz-custom/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting

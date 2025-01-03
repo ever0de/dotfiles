@@ -1,0 +1,58 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
+
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="agnoster"
+HYPHEN_INSENSITIVE="true"
+COMPLETION_WAITING_DOTS="true"
+HIST_STAMPS="yyyy-mm-dd"
+
+plugins=(
+	git 
+	zsh-autosuggestions 
+	zsh-syntax-highlighting
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+set -o vi
+export LANG=en_US.UTF-8
+
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='nvim'
+else
+  export EDITOR='nvim'
+fi
+
+CARGO_FMT="cargo fmt --all"
+CARGO_CHECK="cargo check --release --all-features --all-targets --workspace"
+CARGO_CLIPPY="cargo clippy --release --all-features --all-targets --workspace"
+CARGO_SORT="cargo sort ."
+alias cfp="$CARGO_FMT && $CARGO_CHECK && $CARGO_CLIPPY"
+alias cs="$CARGO_SORT"
+alias vi="nvim"
+alias ls="lsd"
+alias grep="rg"
+alias cd="z"
+alias cleanup-rust="find . -type d -name target -prune -exec rm -r {} +"
+alias gotest="gotestsum --format testname"
+alias jq="jaq"
+alias kubectl="kubecolor"
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+# eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
+
+source "$HOME/.cargo/env"
+
+# add ssh key on github
+# ssh-add --apple-use-keychain --apple-load-keychain ~/.ssh/id_rsa;
+
+# gpg
+export GPG_TTY=$(tty)
+
