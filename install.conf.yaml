@@ -5,27 +5,27 @@
 - clean: ["~", "~/.config"]
 
 - link:
-    # zsh
+    # terminal
+    ~./config/alaclitty: terminal/alacritty
+    ~/.config/kitty: terminal/kitty
+
+    ## zsh
     ~/.zshrc: terminal/zsh/zshrc
     # ~/.p10k.zsh: zsh/p10k.zsh
     ~/.oh-my-zsh: terminal/zsh/omz
     ~/.oh-my-zsh-custom: terminal/zsh/omz-custom
 
-    # terminal
-    ~./config/alaclitty: terminal/alacritty
-    ~/.config/kitty: terminal/kitty
-
     # tools
-    ~/.gitconfig: tools/git/.gitconfig
-    ~/.vimrc: tools/vim/.vimrc
+    ~/.cargo/config.toml: tools/cargo/cargo_config.toml
 
-    # ~/.config/bat: tools/bat
-    ~/.config/yazi: tools/yazi
-    ~/.config/nvim: tools/nvim
+    ~/.gitconfig: tools/git/.gitconfig
+    ~/.config/gitui: tools/gitui
 
     ~/.hammerspoon: tools/hammerspoon
 
-    ~/.cargo/config.toml: tools/cargo/cargo_config.toml
+    # ~/.config/bat: tools/bat
+    # ~/.config/yazi: tools/yazi
+    ~/.config/nvim: tools/nvim
 
 - create:
     ~/.ssh:
